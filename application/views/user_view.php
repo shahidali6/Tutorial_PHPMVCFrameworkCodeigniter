@@ -11,11 +11,13 @@
 
 <?php
 
-foreach ($results as $item) {
-    echo $item->id . ' - ';
-    echo $item->user . ' - ';
-    echo $item->pass . '<br>';
-}
+echo 'Users found: '.$results;
+
+// foreach ($results as $item) {
+//     echo $item->id . ' - ';
+//     echo $item->user . ' - ';
+//     echo $item->pass . '<br>';
+// }
 ?>
 
 </h1>

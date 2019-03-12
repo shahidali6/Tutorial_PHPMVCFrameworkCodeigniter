@@ -4,6 +4,12 @@ class User_model extends CI_Model
 {
     public function get_users()
     {
+
+        $query = $this->db->query('SELECT * FROM users');
+
+        return $query->num_rows(); // for total row numbers
+        return $query->num_fields(); //for total columns numbers
+
         // $config['hostname'] = 'localhost';
         // $config['username'] = 'root';
         // $config['password'] = '';
@@ -13,8 +19,8 @@ class User_model extends CI_Model
 
         // $connection_2 = $this->load->database($config_2);
 
-        $query = $this->db->get('users');
+        // $query = $this->db->get('users');
 
-        return $query->result();
+        // return $query->result();
     }
 }
