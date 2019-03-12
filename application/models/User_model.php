@@ -7,8 +7,12 @@ class User_model extends CI_Model
 
         $query = $this->db->query('SELECT * FROM users');
 
-        return $query->num_rows(); // for total row numbers
-        return $query->num_fields(); //for total columns numbers
+         $query = $this->db->get('users');
+
+        return $query->result();
+
+        // return $query->num_rows(); // for total row numbers
+        // return $query->num_fields(); //for total columns numbers
 
         // $config['hostname'] = 'localhost';
         // $config['username'] = 'root';
