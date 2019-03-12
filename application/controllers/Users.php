@@ -7,16 +7,17 @@ class Users extends CI_Controller
     {
         // $this->load->model('user_model');
 
-        $result =  $this->user_model->get_users();
+        $results['results'] = $this->user_model->get_users();
+
+        $this->load->view('user_view', $results);
 
         // print_r($result);
         // exit;
 
-        foreach ($result as $item) {
-            echo $item->id.' - ';
-            echo $item->user.' - ';
-            echo $item->pass.'<br>';
-            
-        }
+        // foreach ($result as $item) { 
+        //     echo $item->id.' - ';
+        //     echo $item->user.' - ';
+        //     echo $item->pass.'<br>';
+        // }
     }
 }
