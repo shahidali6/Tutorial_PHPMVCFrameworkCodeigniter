@@ -20,4 +20,12 @@ class Users extends CI_Controller
         //     echo $item->pass.'<br>';
         // }
     }
+
+    public function insert_user()
+    {
+        $username = 'haroon';
+        $password = 'secret';
+
+        $this->user_model->create_user(['user' => $username, 'pass' => $password]);
+    }
 }
